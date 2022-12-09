@@ -1,0 +1,10 @@
+<div class="category-show">
+  <%= render partial: "home/nav-category" %>
+  <div class="category-show-render">
+  <div class="category-show-header">
+    </div>
+    <div>
+    <%= render template: "task/index", locals: { tasks: @category.tasks } %>
+    </div>
+  </div>
+</div>

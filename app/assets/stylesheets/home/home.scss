@@ -1,0 +1,111 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-category {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    width: 65vw;
+    margin-top: 10rem;
+    
+  }
+  
+
+  & .renders {
+    padding: 5rem;
+    // background: url('home.jpg');
+    background: url('home2.png');
+    background-size: cover;
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // padding-right: 37rem;
+    // padding-bottom: 25rem;
+  }
+ 
+
+  &-nav {
+    color: white;
+    padding: .5rem 3rem 3rem 3rem;
+    width: 14vw;
+    height: 100vh;
+    background-color: rgb(220, 173, 123);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    & a:link, & a:visited {
+      color: white;
+    }
+    
+
+    & button {
+      font-size: 2.5rem;
+      border-radius: .5rem;
+      border: none;
+      height: 4rem;
+      width: 15rem;
+      cursor: pointer;
+    }
+
+    & h2 {
+      font-size: 3rem;
+    }
+
+    & .nav-buttons {
+      padding: 1rem 8rem;
+      width: 31rem;
+      background-color: transparent;
+      // border-bottom: 2px solid white;
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+
+      & img  {
+        height: 4rem;
+      }
+
+      & a:link, &:visited {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+      }
+
+      & p {
+        font-size: 3rem;
+      }
+    }
+
+    & .user-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+      width: 14vw;
+      border-bottom: 2px solid white;
+    }
+    & .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      height: 85vh;
+      width: 14vw;
+      border-bottom: 2px solid white;
+    }
+    & .signout-container {
+      margin-top: 3rem;
+    }
+  }
+
+}
