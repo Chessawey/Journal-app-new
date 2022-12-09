@@ -1,51 +1,62 @@
-<div class='landing-page'> 
-  <div class="heading">
-    <h3>Documenting life shouldnt be a hassle <span class="dot dot-one">.</span> <span class="dot dot-two">.</span> <span class="dot dot-three">.</span></h3>
-    <h1 class="boligrafo">Bolígrafo</h1>
-  </div>
-
-  <div class="sign-in">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <h1>Sign in </h1>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-     </div>
-
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+<body class="body-home">
+  <div class="nav-div">
+    <div class="my-journ">
+      <%= image_tag "nav-icon.png", :class => "nav-img" %>
+      <p>My Journal</p>
     </div>
+    <nav class="nav-list">
+      <ul class="nav-list">
+        <li>About</li>
+        <li>Feature</li>
+        <li>Pricing</li>
+        <li>Blog</li>
+        <li>Support</li>
+      </ul>
+    </nav>
+    </div>
+</body>
 
-    <% if devise_mapping.rememberable? %>
-      <div class="field remember">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+<section>
+  <div>
+    <div class="title-div">
+      <h1 class="main-title">Do things in order.</h1>
+      <p class="sub-head">Be productive. Be organized.</p>
+    </div>
+    <div class="main-div">
+      <%= image_tag "main-img.png", :class => "main-img" %>
+
+      <div class="sign-in-div">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="placeholder-div">
+            <%= f.email_field :email, autofocus: true, placeholder: "Email", autocomplete: "email", class: "placeholder-email" %>
+          </div>
+        
+          <div class="placeholder-div1">
+            <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "placeholder-pass" %>
+          </div>
+        
+          <% if devise_mapping.rememberable? %>
+            <div class="remember">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+        
+          <div class="btn-div">
+            <%= f.submit "Log in", class: "log-in-btn" %>
+          </div>
+        <% end %>
+        
+        <%= render "devise/shared/links", class: "links" %>
+        
       </div>
-    <% end %>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
     </div>
-  <% end %>
-  <%= render "devise/shared/links" %>
   </div>
+</section>
 
 
-  <footer class="landing-footer">
-    <div class="footer-links">
-      <p>FAQ</p>
-      <p>Contact us</p>
-      <p>About</p>
-      <p>Privacy</p>
-      <p></p>
-    </div>
-    <div class="footer-images">
-      <%= image_tag("footerwhite1.png") %>
-      <%= image_tag("footerwhite2.png") %>
-      <%= image_tag("footerwhite3.png") %>
-      <%= image_tag("footerwhite4.png") %>
-      <%= image_tag("footerwhite5.png") %>
-    </div>
-  </footer>
-</div>
+<footer>
+  <div class="footer-div">
+    <p>&copy 2022-2030 All rights reserved.</p>
+  </div>
+</footer>
