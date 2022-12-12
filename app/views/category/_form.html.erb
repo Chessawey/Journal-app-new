@@ -3,15 +3,15 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "input-field" %>
   </div>
 
   <div>
     <%= form.label :details, style: "display: block" %>
-    <%= form.text_field :details %>
+    <%= form.text_field :details, class: "input-field" %>
   </div>
 
-  <div>
+  <div class="save-cat">
     <%= form.submit %>
   </div>
 <% end %>

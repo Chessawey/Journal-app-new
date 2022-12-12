@@ -1,13 +1,14 @@
 .categories {
   padding: 0 3rem 2rem 3rem;
-  // display: flex;
-  // flex-direction: column;
   align-items: center;
-  background-color: transparent;
   font-family: 'Solway', serif;
   & a:link, & a:visited {
     color: black;
     text-decoration: none;
+  }
+
+  a:hover {
+    color: #386641;
   }
   
 
@@ -20,7 +21,7 @@
     background-color: #6d6875;
     width: 45vw;
     border-radius: 8px;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   &-holder {
@@ -38,34 +39,96 @@
     padding: 1rem;
     border-radius: 1rem;
     background-color: #e5989b;
-    font-size: 1.2rem;
+
+    font-size: 1rem;
 
 
     & img {
-      height: 2.5rem;
+      height: 2rem;
     }
   }
 }
  
-.category-edit, .category-show, .category-new, .task-new {
-  display: flex;
+// .category-edit, .category-show, .task-new {
+//   display: flex;
+// }
+
+.category-new, .category-edit, .task-new {
+  background-color: #edede9;
+  height: 100vh;
 }
 
 .new-category {
-  border: 2px solid black;
+  box-shadow: 10px 10px 5px gray;
+  color: #fff;
+  background-color: #e5989b;
+  border-radius: 15px;
   height: 30rem;
   width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  font-family: 'Solway', serif;
+  margin-top: 10rem;
+  margin-left: 50rem;
 }
 
+.edit-container {
+  box-shadow: 10px 10px 5px gray;
+  color: #fff;
+  background-color: #e5989b;
+  border-radius: 15px;
+  border: transparent;
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-family: 'Solway', serif;
+  margin-top: 10rem;
+  margin-left: 50rem;
+}
+
+.input-field {
+  height: 3rem;
+  width: 18vw;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+.save-cat input{
+  font-size: 1.3rem;
+  height: 3rem;
+  width: 10rem;
+  margin-top: 1.5rem;
+  margin-left: 6.3rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #6d6875;
+}
+
+
+.back-cat {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.back-cat:hover {
+  color: #6d6875;
+}
+
+
 .category-show {
-  background: url("cork") no-repeat;
-  // background-position: center;
-  background-size: cover;
+  background-color: #6d6875;
 
 
   
@@ -78,8 +141,8 @@
 
   &-render {
     padding: 5rem;
-    height: 100vh;
-    width: 100vw;
+    height: 95vh;
+    width: 90vw;
   }
 }
 
@@ -113,6 +176,8 @@
       font-size: 1.5rem;
       margin-top: 2.5rem;
       justify-content: space-between;
+      font-family: 'Solway', serif;
+
     }
 
     & .task-date {
@@ -166,6 +231,44 @@
 
   .date-icon {
     height: 42px;
-    width: 40px;
-    margin-right: 5rem;
+    // width: 40px;
+    margin-left: 33rem;
+  }
+
+  .cat-date {
+    margin-left: 0.5rem;
+    color: #fff;
+  }
+
+  .edit-icon {
+    height: 20px;
+  }
+
+
+  .back-to-category {
+    background-color: #edede9;
+    height: 3rem;
+    width: 13rem;
+    border-radius: 10px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-left: 50rem;
+  }
+
+  .back-cat2 {
+    color: #333;
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+
+  .back-cat2:hover {
+    color: #e5989b;
+  }
+
+  .holder-holder {
+    background-color: #edede9;
+    height: 95vh;
   }

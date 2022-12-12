@@ -7,7 +7,7 @@
   <% @category.each do |category| %>
     <div class="category">
       <h2><%= category.name %></h2>
-      <h2>Task: <%= category.tasks.count %></h2>
+      <h2 class="task-link">Task: <%= category.tasks.count %></h2>
       
       <%= link_to "Tasks", show_category_path(current_user, category) %> |
       <%= link_to image_tag("edit.png"), edit_user_category_path(current_user, category) %> |

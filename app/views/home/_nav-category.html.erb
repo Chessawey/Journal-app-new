@@ -1,27 +1,10 @@
-<nav class="home-nav">
-  <div class="user-container">
-    <h2> Hi <%= current_user.name  %></h2>
+<div class="div-home">
+    <nav class="nav-home">
+      <%= image_tag "nav-icon.png", :class => "nav-home-img" %>
+      <p>My Journal</p>
+    </nav>
+    <div class="user-log-out">
+      <h3><%= current_user.email %></h3>
+      <%= button_to image_tag("log-out .png"), destroy_user_session_path, method: :delete %>
     </div>
-    <div class="button-container">
-    <div class="nav-buttons">
-      <%= image_tag("Home.png", :alt => "category logo") %>
-      <%= link_to "Home", authenticated_root_path %>
-    </div>
-    <div class="nav-buttons">
-      <%= image_tag("overview.png", :alt => "overview logo") %>
-      <%= link_to "Overview", authenticated_root_path %>
-    </div>
-    <div class="nav-buttons">
-    <%= image_tag("analytic.png", :alt => "overview logo") %>
-      <%= link_to "Analytics", authenticated_root_path %>
-    </div>
-    <div class="nav-buttons">
-      <%= image_tag("controls.png", :alt => "controls logo") %>
-      <%= link_to "Settings", authenticated_root_path %>
-    </div>
-
-  </div>
-  <div class="signout-container">
-    <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-  </div>
- </nav>
+</div>

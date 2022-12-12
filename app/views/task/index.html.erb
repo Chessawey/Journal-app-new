@@ -1,7 +1,7 @@
 <div class="task-header">
 <h1><%= @category.name %></h1>
 <div>
-  <%= link_to image_tag("new.png"), new_user_category_task_path(tasks, @category) %>
+  <%= link_to image_tag("add-cat.png"), new_user_category_task_path(tasks, @category), class: 'add-cat-idon' %>
   <%= link_to "Create new task", new_user_category_task_path(tasks, @category) %>
 </div>
 </div>
@@ -20,4 +20,8 @@
     </div>
     </div>
     <% end %>
-    </div>z
+    </div>
+
+    <div class="back-to-category">
+      <%= link_to "Back to categories", authenticated_root_path, class: "back-cat2" %>
+    </div>

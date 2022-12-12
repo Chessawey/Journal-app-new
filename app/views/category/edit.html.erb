@@ -1,10 +1,10 @@
 <div class="category-edit">
   <%= render partial: "home/nav-category" %>
   <div class="edit-container">
-    <h1>Editing Category</h1>
+    <h1>Edit Category</h1>
     <%= render "form", category: @category, user: @current_user %>
     <div class="edit-btn">
-      <%= link_to "Back to category", authenticated_root_path %>
+      <%= link_to "Back to category", authenticated_root_path, class: "back-cat" %>
     </div>
   </div>
 </div>
